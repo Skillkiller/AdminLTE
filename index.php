@@ -33,21 +33,21 @@
 <?php
 	
 	
-    if (isset($_POST["loginname"]))
+    if (isset($_POST["username"]))
         {
             
             # Userdaten korrekt - User ist eingeloggt
             # Login merken !
-            $_SESSION["login"] = 1;
+            $_SESSION["username"] = $_POST["username"];
         
         }
 
 		
 		
-    if (!isset($_SESSION["login"]) or $_SESSION["login"] != 1)
+    if (!isset($_SESSION["username"]))
         {
         ?>
-		<div class="" style="margin:auto;width: 450px;">
+		<div class="col-md-4">
 			<div class="box box-primary">
 				<div class="box-header">
 				<h3 class="box-title">Anmeldung</h3>
@@ -60,15 +60,15 @@
 						<label for="inputUsername" class="col-sm-2 control-label">Username</label>
 
 						<div class="col-sm-10">
-							<input class="form-control" id="inputUsername" placeholder="Username" name="loginname" type="text">
+							<input class="form-control" id="inputUsername" placeholder="Username" name="username" type="text">
 						</div>
-					</div>
-				</form> 
+					</div> 
 				</div>
 				<div class="box-footer">
-				Dies ist eine Test Anmeldung
-				<button type="button" class="btn btn-danger pull-right">Anmelden</button>
+					Dies ist eine Test Anmeldung
+					<button type="submit" class="btn btn-danger pull-right">Anmelden</button>
 				</div>
+				</form>
 			</div>
 		</div>
 		<?php
@@ -82,10 +82,10 @@
 <center>
 	<div class="box box-solid box-info">
 		<div class="box-header">
-          <h3 class="box-title">Weiterleitung</h3>
+          <h3 class="box-title">Willkommen <?php echo $_SESSION["username"] ?></h3>
         </div>
 		<div class="box-body">
-          <p>Du wirst weitergeleitet weil du bereits angemeldet bist!
+          <p>Wir leiten dich nun zur Weboberfläche weiter</p>
         </div>
 	</div>
 </center>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION["login"]) or $_SESSION["login"] != 1)
+if (!isset($_SESSION["username"]))
 {
 	?><meta http-equiv="refresh" content="1; URL=index"  />
 	<h1>Du musst dich erst anmelden</h1>
@@ -128,7 +128,7 @@ desired effect
               <!-- The user image in the navbar-->
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs"><?php echo $_SESSION["username"] ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -186,7 +186,7 @@ desired effect
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p><?php echo $_SESSION["username"] ?></p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>

@@ -31,7 +31,7 @@ session_destroy();
   <![endif]-->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="" style="margin:auto;width: 450px;">
+<div class="col-md-4">
 	<div class="box box-solid box-success">
 	<div class="box-header with-border">
 		<h3 class="box-title">Abgemeldet</h3>
