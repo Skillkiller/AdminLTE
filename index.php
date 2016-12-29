@@ -47,7 +47,7 @@
     if (!isset($_SESSION["login"]) or $_SESSION["login"] != 1)
         {
         ?>
-		<div class="" style="margin: 0px auto;width: 450px;">
+		<div class="" style="margin:auto;width: 450px;">
 			<div class="box box-primary">
 				<div class="box-header">
 				<h3 class="box-title">Anmeldung</h3>
